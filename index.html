@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Google Play</title>
+    <style>
+        :root { --google-gray: #f1f3f4; --google-green: #01875f; --google-blue: #4285f4; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: white; padding-top: env(safe-area-inset-top); padding-bottom: 80px; }
+        
+        .search-bar { background: var(--google-gray); margin: 10px; padding: 12px; border-radius: 24px; display: flex; align-items: center; color: #5f6368; font-size: 14px; }
+        
+        .tabs { display: flex; border-bottom: 1px solid #ddd; padding: 0 10px; overflow-x: auto; sticky; top: 0; background: white; }
+        .tab { padding: 12px 16px; color: #5f6368; font-weight: 500; white-space: nowrap; }
+        .tab.active { color: var(--google-green); border-bottom: 3px solid var(--google-green); }
+
+        .section-title { padding: 15px 20px 5px; font-size: 18px; font-weight: bold; color: #202124; }
+
+        .app-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; padding: 15px 20px; }
+        .app-card { text-align: center; text-decoration: none; color: inherit; }
+        .app-icon { width: 64px; height: 64px; border-radius: 14px; margin: 0 auto 5px; display: block; object-fit: cover; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .app-name { font-size: 11px; color: #3c4043; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+        /* кнопка установки */
+        .install-btn { margin-top: 5px; background: white; border: 1px solid #dadce0; border-radius: 4px; color: var(--google-green); font-size: 10px; padding: 2px 8px; font-weight: bold; }
+
+        .nav-bottom { position: fixed; bottom: 0; width: 100%; height: 60px; background: white; border-top: 1px solid #ddd; display: flex; justify-content: space-around; align-items: center; padding-bottom: env(safe-area-inset-bottom); }
+        .nav-item { color: #5f6368; font-size: 11px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="search-bar">🔍 Поиск приложений и игр</div>
+
+    <div class="tabs">
+        <div class="tab active">Для вас</div>
+        <div class="tab">Игры</div>
+        <div class="tab">Приложения</div>
+        <div class="tab">Детям</div>
+    </div>
+
+    <div class="section-title">Популярные игры</div>
+    <div class="app-grid">
+        <a href="https://www.roblox.com" class="app-card">
+            <img class="app-icon" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg">
+            <div class="app-name">Roblox</div>
+            <div class="install-btn">УСТАНОВИТЬ</div>
+        </a>
+        <a href="https://poki.com" class="app-card">
+            <img class="app-icon" src="https://img.poki.com/65df64983088b3948574169542a9a4b3.png">
+            <div class="app-name">Poki Games</div>
+            <div class="install-btn">УСТАНОВИТЬ</div>
+        </a>
+        <a href="https://poki.com/ru/g/subway-surfers" class="app-card">
+            <img class="app-icon" src="https://upload.wikimedia.org/wikipedia/en/a/ad/Subway_Surfers_logo.png">
+            <div class="app-name">Subway Surfers</div>
+            <div class="install-btn">УСТАНОВИТЬ</div>
+        </a>
+    </div>
+
+    <div class="section-title">Сервисы Pico OS</div>
+    <div class="app-grid">
+        <a href="https://youtube.com" class="app-card">
+            <img class="app-icon" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
+            <div class="app-name">YouTube</div>
+            <div class="install-btn">ОТКРЫТЬ</div>
+        </a>
+        <a href="https://photos.google.com" class="app-card">
+            <img class="app-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Google_Photos_icon.svg/1024px-Google_Photos_icon.svg.png">
+            <div class="app-name">Фото</div>
+            <div class="install-btn">ОТКРЫТЬ</div>
+        </a>
+        <a href="https://tasks.google.com" class="app-card">
+            <img class="app-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Tasks_2021.svg/1200px-Google_Tasks_2021.svg.png">
+            <div class="app-name">Задачи</div>
+            <div class="install-btn">ОТКРЫТЬ</div>
+        </a>
+    </div>
+
+    <div class="nav-bottom">
+        <div class="nav-item" style="color:var(--google-green)">🎮<br>Игры</div>
+        <div class="nav-item">📱<br>Приложения</div>
+        <div class="nav-item">🎬<br>Фильмы</div>
+        <div class="nav-item">📚<br>Книги</div>
+    </div>
+
+</body>
+</html>
